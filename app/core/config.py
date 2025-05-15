@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings
 
+
 class Settings(BaseSettings):
     project_name: str
     database_url: str
@@ -9,5 +10,6 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         extra = "allow"  # This allows extra fields in the .env file without causing validation errors
+
 
 settings = Settings()
